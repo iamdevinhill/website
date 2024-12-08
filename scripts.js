@@ -16,8 +16,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         this.classList.add('active');
 
         // Close mobile menu if open
-        document.querySelector('.navbar-nav').classList.remove('active');
-        document.querySelector('.menu-toggle').classList.remove('active');
+        const navbarNav = document.querySelector('.navbar-nav');
+        const menuToggle = document.querySelector('.menu-toggle');
+        
+        if (navbarNav.classList.contains('active')) {
+            navbarNav.classList.remove('active');
+            menuToggle.classList.remove('active');
+        }
     });
 });
 

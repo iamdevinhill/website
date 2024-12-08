@@ -328,3 +328,61 @@ body {
         margin-bottom: 20px;
     }
 }
+/* Ensure the menu toggle is hidden on desktop */
+.menu-toggle {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: var(--text-primary);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+    /* Display the hamburger icon */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar-nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--dark-bg);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .navbar-nav.active {
+        left: 0;
+    }
+
+    .navbar-nav li {
+        margin: 20px 0;
+    }
+
+    /* Toggle the hamburger icon to a close icon */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
