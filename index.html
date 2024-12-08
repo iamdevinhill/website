@@ -4,325 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>John Doe | Dark Portfolio</title>
-    <style>
-        :root {
-            --dark-bg: #121212;
-            --darker-bg: #0a0a0a;
-            --accent-color: #00ffff;
-            --text-primary: #e0e0e0;
-            --text-secondary: #888;
-            --border-color: #333;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scrollbar-width: thin;
-            scrollbar-color: var(--accent-color) var(--dark-bg);
-        }
-
-        html, body {
-            max-width: 100%;
-            overflow-x: hidden;
-        }
-
-        body {
-            font-family: 'Montserrat', 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: var(--dark-bg);
-            color: var(--text-primary);
-        }
-
-        /* Grungy Glitch Effects */
-        @keyframes glitch {
-            2%, 64% { transform: translate(2px, 0) skew(0deg); }
-            4%, 60% { transform: translate(-2px, 0) skew(0deg); }
-            62% { transform: translate(0, 0) skew(5deg); }
-        }
-
-        .glitch {
-            position: relative;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .glitch::before,
-        .glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.8;
-        }
-
-        .glitch::before {
-            left: 2px;
-            text-shadow: -2px 0 red;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch 5s infinite linear alternate-reverse;
-        }
-
-        .glitch::after {
-            left: -2px;
-            text-shadow: -2px 0 blue;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch 5s infinite linear alternate-reverse;
-        }
-
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 5%;
-            background-color: rgba(0,0,0,0.8);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .navbar-brand {
-            font-weight: bold;
-            font-size: 1.5rem;
-            color: var(--accent-color);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .navbar-nav {
-            display: flex;
-            list-style: none;
-            align-items: center;
-        }
-
-        .navbar-nav li {
-            margin-left: 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .navbar-nav a {
-            color: var(--text-primary);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .navbar-nav a::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: -5px;
-            left: -100%;
-            background-color: var(--accent-color);
-            transition: left 0.3s ease;
-        }
-
-        .navbar-nav a:hover::after {
-            left: 0;
-        }
-
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            z-index: 1001;
-        }
-
-        .menu-toggle span {
-            height: 3px;
-            width: 25px;
-            background-color: var(--text-primary);
-            margin: 4px 0;
-            transition: 0.4s;
-        }
-
-        /* Sections */
-        .section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 100px 5%;
-            position: relative;
-            background-color: var(--dark-bg);
-            overflow: hidden;
-            width: 100%;
-        }
-
-        #home {
-            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
-            text-align: center;
-        }
-
-        #home h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        /* Project Grid */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-            width: 100%;
-        }
-
-        .project-card {
-            background-color: var(--darker-bg);
-            border: 1px solid var(--border-color);
-            padding: 25px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(120deg, transparent, var(--accent-color), transparent);
-            transition: 0.5s;
-            opacity: 0.1;
-        }
-
-        .project-card:hover::before {
-            left: 100%;
-        }
-
-        .project-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,255,255,0.2);
-        }
-
-        /* Contact Form */
-        .contact-form {
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            background-color: var(--darker-bg);
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            padding: 12px;
-            margin-bottom: 20px;
-            transition: border-color 0.3s ease;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: var(--accent-color);
-        }
-
-        .contact-form button {
-            background-color: var(--accent-color);
-            color: var(--dark-bg);
-            border: none;
-            padding: 12px 25px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-
-        .contact-form button:hover {
-            background-color: white;
-        }
-
-        /* Responsive Adjustments */
-        @media screen and (max-width: 768px) {
-            /* Mobile Navigation */
-            .navbar {
-                padding: 15px 3%;
-            }
-
-            .navbar-nav {
-                position: fixed;
-                top: 0;
-                left: -100%;
-                width: 100%;
-                height: 100vh;
-                background-color: var(--dark-bg);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                transition: left 0.3s ease;
-                z-index: 1000;
-            }
-
-            .navbar-nav.active {
-                left: 0;
-            }
-
-            .navbar-nav li {
-                margin: 20px 0;
-            }
-
-            .menu-toggle {
-                display: flex;
-            }
-
-            .menu-toggle.active span:nth-child(1) {
-                transform: rotate(-45deg) translate(-5px, 6px);
-            }
-
-            .menu-toggle.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .menu-toggle.active span:nth-child(3) {
-                transform: rotate(45deg) translate(-5px, -6px);
-            }
-
-            /* Typography and Layout */
-            #home h1 {
-                font-size: 2rem;
-            }
-
-            .section {
-                padding: 80px 3%;
-            }
-
-            .project-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .project-card {
-                margin-bottom: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="navbar-brand glitch" data-text="JOHN DOE">JOHN DOE</div>
-        
         <div class="menu-toggle">
             <span></span>
             <span></span>
             <span></span>
         </div>
-
         <ul class="navbar-nav">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -333,16 +24,18 @@
 
     <section id="home" class="section">
         <div>
-            <h1 class="glitch" data-text="CREATIVE DEVELOPER">CREATIVE DEVELOPER</h1>
-            <p>Crafting digital experiences with code and creativity</p>
+            <h1 class="glitch" data-text="CREATIVE DEVELOPER">DEVELOPER</h1>
+            <p>Crafting digital solutions with code and creativity</p>
         </div>
     </section>
 
     <section id="about" class="section">
         <div>
             <h2 class="glitch" data-text="ABOUT ME">ABOUT ME</h2>
-            <p>A digital architect pushing the boundaries of web design and development. Transforming complex ideas into sleek, innovative digital solutions.</p>
-        </div>
+            <div class="about-content">
+                <img src="headshot.jpg" alt="John Doe's Headshot" class="headshot">
+                <p>A digital architect pushing the boundaries of web design and development. Transforming complex ideas into sleek, innovative digital solutions.</p>
+            </div>
     </section>
 
     <section id="projects" class="section">
@@ -350,15 +43,15 @@
             <h2 class="glitch" data-text="MY PROJECTS">MY PROJECTS</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <h3>Cyber Interface</h3>
+                    <h3>Yadayada</h3>
                     <p>Advanced UI/UX design with cutting-edge interactive elements</p>
                 </div>
                 <div class="project-card">
-                    <h3>Data Nexus</h3>
+                    <h3>Data Shit</h3>
                     <p>Complex data visualization platform with real-time analytics</p>
                 </div>
                 <div class="project-card">
-                    <h3>Neural Network</h3>
+                    <h3>Whatever Else</h3>
                     <p>Machine learning application exploring predictive algorithms</p>
                 </div>
             </div>
@@ -377,32 +70,6 @@
         </div>
     </section>
 
-    <script>
-        // Smooth scrolling and form submission
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                // Close mobile menu if open
-                document.querySelector('.navbar-nav').classList.remove('active');
-                document.querySelector('.menu-toggle').classList.remove('active');
-            });
-        });
-
-        // Mobile menu toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.navbar-nav').classList.toggle('active');
-        });
-
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Message sent. Connecting to digital realm...');
-            this.reset();
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
