@@ -1,10 +1,20 @@
- // Smooth scrolling and form submission
- document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// Smooth scrolling and form submission
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+        
+        const target = document.querySelector(this.getAttribute('href'));
+        
+        // Smoothly scroll to the section
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
         });
+
+        // Add active state to clicked menu item
+        document.querySelectorAll('.navbar-nav li a').forEach(link => link.classList.remove('active'));
+        this.classList.add('active');
+
         // Close mobile menu if open
         document.querySelector('.navbar-nav').classList.remove('active');
         document.querySelector('.menu-toggle').classList.remove('active');

@@ -15,9 +15,8 @@
     scrollbar-color: var(--accent-color) var(--dark-bg);
 }
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for better UX */
 }
 
 body {
@@ -25,6 +24,8 @@ body {
     line-height: 1.6;
     background-color: var(--dark-bg);
     color: var(--text-primary);
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* Grungy Glitch Effects */
@@ -48,7 +49,6 @@ body {
     object-fit: cover;
     border: 3px solid var(--accent-color);
 }
-
 
 .glitch {
     position: relative;
@@ -91,7 +91,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid var(--border-color);
@@ -124,6 +124,12 @@ body {
     letter-spacing: 1px;
     transition: color 0.3s ease;
     position: relative;
+}
+
+.navbar-nav a.active {
+    color: var(--accent-color);
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent-color); /* Active link indicator */
 }
 
 .navbar-nav a::after {
@@ -218,7 +224,7 @@ body {
 
 .project-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,255,255,0.2);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
 }
 
 /* Contact Form */
@@ -322,5 +328,3 @@ body {
         margin-bottom: 20px;
     }
 }
-
-
