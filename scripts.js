@@ -41,6 +41,13 @@ if (menuToggle && navbarNav) {
     });
 }
 
+// Prevent automatic scrolling on page load
+window.addEventListener('load', () => {
+    // Ensure no initial scroll behavior
+    history.replaceState(null, null, window.location.href); // Reset the history to prevent jumping to anchors
+    window.scrollTo(0, 0); // Scroll to the top of the page on load
+});
+
 // Update the current year dynamically
 const currentYearElement = document.querySelector('.current-year'); // Select the element that should display the current year
 

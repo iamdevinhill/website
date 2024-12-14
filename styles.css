@@ -44,7 +44,12 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    max-width: 900px; /* Controls the maximum width of the content */
+    width: 100%; /* Ensures it takes up full width on smaller screens */
+    padding: 0 20px; /* Optional: Adds padding on the sides for smaller screens */
+    text-align: center; /* Ensures the text is centered */
 }
+
 
 .headshot {
     width: 250px;
@@ -114,10 +119,10 @@ body {
     display: flex;
     list-style: none;
     align-items: center;
+    gap: 20px;
 }
 
 .navbar-nav li {
-    margin-left: 20px;
     position: relative;
     overflow: hidden;
 }
@@ -128,7 +133,6 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s ease;
-    position: relative;
 }
 
 .navbar-nav a.active {
@@ -157,13 +161,14 @@ body {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    background-color: var(--dark-bg);
     z-index: 1001;
 }
 
 .menu-toggle span {
     height: 3px;
     width: 25px;
-    background-color: var(--text-primary);
+    background-color: var(--accent-color);
     margin: 4px 0;
     transition: 0.4s;
 }
@@ -326,7 +331,7 @@ body {
     margin-top: 10px;
 }
 
-/* Responsive Design */
+/* Mobile Navigation */
 @media screen and (max-width: 768px) {
     /* Mobile Navigation */
     .navbar {
@@ -355,20 +360,23 @@ body {
         margin: 20px 0;
     }
 
+    /* Mobile View */
+    /* Show the menu toggle button on small screens */
     .menu-toggle {
         display: flex;
     }
 
+    /* Toggle button transformation when active */
     .menu-toggle.active span:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
+        transform: rotate(-45deg) translate(-5px, 6px); /* Top bar */
     }
 
     .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
+        opacity: 0; /* Middle bar disappears */
     }
 
     .menu-toggle.active span:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
+        transform: rotate(45deg) translate(-5px, -6px); /* Bottom bar */
     }
 
     /* Typography and Layout */
@@ -389,26 +397,6 @@ body {
     }
 
     .footer {
-        padding: 30px 3%;
+        padding: 40px 3%;
     }
-
-    .social-links {
-        gap: 15px;
-    }
-
-    .social-icon {
-        font-size: 1.2rem;
-    }
-}
-
-/* Animations */
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-}
-
-/* Accessibility Enhancements */
-.social-icon:focus-visible {
-    color: var(--accent-color);
-    transform: scale(1.2);
 }
