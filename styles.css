@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-family: 'Mulish', sans-serif;
     line-height: 1.6;
     background-color: var(--dark-bg);
     color: var(--text-primary);
@@ -569,5 +569,45 @@ h1, h2, h3 {
     }
 }
 
-/* Additional Utility Classes and Fine-Tuning from Previous Design */
-/* [Rest of the previous CSS remains largely the same] */
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: transparent; /* Make toggle background blend in */
+    border: none; /* Remove border */
+    z-index: 1001;
+    padding: 6px; /* Add some padding for easier click area */
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: var(--accent-color); /* Keep the accent color for visibility */
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Show toggle button on mobile */
+    }
+
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.8); /* Ensure navbar blends in with transparency */
+    }
+
+    /* Toggle button transformation when active */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px); /* Top bar */
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0; /* Middle bar disappears */
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px); /* Bottom bar */
+    }
+}
