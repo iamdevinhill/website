@@ -1,153 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile devices -->
-    <title>Devin Hill | Portfolio</title> <!-- The title of the webpage, visible in the browser tab -->
-    <meta name="description" content="Portfolio of Devin Hill - Data Scientist, AI Professional, Producer, Musician, and Writer"> <!-- Meta description for SEO -->
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file for styling -->
-    <link rel="preload" href="headshot.jpg" as="image"> <!-- Preload the headshot image for faster loading -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devin Hill | Portfolio</title>
+    <meta name="description" content="Portfolio of Devin Hill - Data Scientist, AI Professional, Producer, Musician, and Writer">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="headshot.jpg" as="image">
     <link rel="icon" href="headshot.jpg" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 </head>
 <body>
-    <!-- Header and Navigation Bar -->
     <header>
-        <nav class="navbar"> <!-- Navigation bar container -->
-            <div class="navbar-brand glitch" data-text="Devin Hill">Devin Hill</div> <!-- Branding text with a "glitch" effect -->
+        <nav class="navbar">
+            <div class="navbar-brand glitch" data-text="Devin Hill">Devin Hill</div>
             <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
-                <!-- Button to toggle the mobile navigation menu -->
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </button>
-            <ul class="navbar-nav"> <!-- Navigation links -->
-                <li><a href="#home">Home</a></li> <!-- Link to the home section -->
-                <li><a href="#about">About</a></li> <!-- Link to the about section -->
-                <li><a href="#projects">Projects</a></li> <!-- Link to the projects section -->
-                <li><a href="#contact">Contact</a></li> <!-- Link to the contact section -->
+            <ul class="navbar-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Home Section -->
         <section id="home" class="section">
             <div>
-                <img src="headshot.jpg" alt="Headshot of Devin Hill" class="headshot" width="300" height="300"> <!-- Displaying Devin Hill's headshot -->
+                <img src="headshot.jpg" alt="Headshot of Devin Hill" class="headshot" width="300" height="300">
                 <div class="home-text">
-                    <h1 class="glitch" data-text="I am Devin Hill">I am Devin Hill</h1> <!-- Glitch effect title -->
-                    <p>Data and AI Engineer, Producer, Musician, Songwriter.<br>Crafting digital solutions with code and creativity.</p> <!-- Short intro text -->
+                    <h1 class="glitch" data-text="I am Devin Hill">I am Devin Hill</h1>
+                    <p>Data and AI Engineer, Producer, Musician, Songwriter.<br>Crafting digital solutions with code and creativity.</p>
                 </div>
             </div>
         </section>
 
-<!-- About Section -->
-<section id="about" class="section">
-    <div>
-        <h2 class="glitch" data-text="ABOUT ME">ABOUT ME</h2> <!-- Glitch effect heading -->
-        <div class="about-content">
-            <p>
-                I am a Data and AI Engineer with a Bachelor's degree in Data Science and a Master's degree in Organizational Leadership. 
-                With a deep passion for music that has spanned half of my life, I bring a unique perspective to the world of technology and innovation. 
-                My expertise lies in the vital role that metrics and quality play in driving success and differentiation, both in music and in the tech industry.
-            </p> <!-- Description of the individual -->
-        </div>
-    </div>
+        <section id="about" class="section">
+            <div>
+                <h2 class="glitch" data-text="ABOUT ME">ABOUT ME</h2>
+                <div class="about-content">
+                    <p>
+                        I am a Data and AI Engineer with a Bachelor's degree in Data Science and a Master's degree in Organizational Leadership. 
+                        With a deep passion for music that has spanned half of my life, I bring a unique perspective to the world of technology and innovation. 
+                        My expertise lies in the vital role that metrics and quality play in driving success and differentiation, both in music and in the tech industry.
+                    <br>
+                    <br>
+                    Here is a playlist of some of my work and the homies.
+                    </p>
+                </div>
+            </div>
 
-    <!-- Spotify Playlist Embed -->
-    <div class="spotify-embed-container" style="background-color:#108dda; border-radius:12px; padding:10px;">
-        <iframe 
-            style="border-radius:12px"
-            src="https://open.spotify.com/embed/playlist/2slrwyAxK3Pt02z9y9DGCO?utm_source=generator&theme=0" 
-            width="100%" 
-            height="352" 
-            frameborder="0" 
-            allowfullscreen 
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-            loading="lazy">
-        </iframe>
-    </div>
-</section>
+            <div class="spotify-embed-container" style="background-color:#108dda; border-radius:12px; padding:10px; width:100%;">
+                <iframe 
+                    style="border-radius:12px; width:100%;" 
+                    src="https://open.spotify.com/embed/playlist/2slrwyAxK3Pt02z9y9DGCO?utm_source=generator&theme=0" 
+                    height="352" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy">
+                </iframe>
+            </div>
+            
+            </div>
+        </section>
 
-
-        <!-- Projects Section -->
         <section id="projects" class="section">
             <div>
-                <h2 class="glitch" data-text="MY PROJECTS">MY PROJECTS</h2> <!-- Glitch effect heading -->
+                <h2 class="glitch" data-text="MY PROJECTS">MY PROJECTS</h2>
                 <div class="project-grid">
-                    <!-- Project Cards -->
                     <div class="project-card">
-                        <h3>Data Science</h3> <!-- Project title -->
-                        <p>Advanced UI/UX design with cutting-edge interactive elements.</p> <!-- Short description of the project -->
+                        <h3>Data shit</h3>
+                        <p>Advanced UI/UX design with cutting-edge interactive elements and data-driven insights.</p>
                     </div>
                     <div class="project-card">
-                        <h3>Data Visualization</h3> <!-- Project title -->
-                        <p>Complex data visualization platform with real-time analytics.</p> <!-- Short description of the project -->
+                        <h3>Data Visualization</h3>
+                        <p>Complex data visualization platform with real-time analytics and dynamic reporting.</p>
                     </div>
                     <div class="project-card">
-                        <h3>Explorer</h3> <!-- Project title -->
-                        <p>doing shit.</p> <!-- Short description of the project -->
+                        <h3>AI Explorer</h3>
+                        <p>Innovative AI projects exploring machine learning, natural language processing, and intelligent systems.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="section">
             <div>
-                <h2 class="glitch" data-text="CONTACT">CONTACT</h2> <!-- Glitch effect heading -->
-                <p>Direct all inquiries to the contact button below:</p> <!-- Instruction for the contact section -->
+                <h2 class="glitch" data-text="CONTACT">CONTACT</h2>
+                <p>Direct all inquiries to the contact button below:</p>
                 <div class="contact-form">
-                    <!-- Mailto Link for Contact -->
                     <a href="mailto:devin.hill121192@gmail.com?subject=Business%20Inquiry&body=Dear%20Devin,%0D%0A%0D%0A
-                            I%20would%20like%20to%20discuss%20[Insert%20your%20topic%20here].%0D%0A%0D%0A
-                            Best%20regards,%0D%0A[Your%20Name]" 
+                        I%20would%20like%20to%20discuss%20[Insert%20your%20topic%20here].%0D%0A%0D%0A
+                        Best%20regards,%0D%0A[Your%20Name]" 
                         class="contact-form-button">
-                        CONTACT <!-- Button text -->
+                        CONTACT
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Footer Section -->
         <footer class="footer">
             <div class="footer-content">
-                <nav class="social-links" aria-label="Social Media Links"> <!-- Social media links navigation -->
-                    <h2 class="glitch" data-text="CONTACT">Connect with me:</h2> <!-- Glitch effect heading -->
-                    <!-- Social Media Icons -->
+                <nav class="social-links" aria-label="Social Media Links">
+                    <h2 class="glitch" data-text="CONNECT">Connect with me:</h2>
+                    <a href="https://www.spotify.com/" class="social-icon" aria-label="Spotify Profile">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://www.applemusic.com/" class="social-icon" aria-label="Apple Profile">
+                        <i class="fab fa-apple"></i>
+                    </a>
                     <a href="https://www.instagram.com/thisisdevinhill/" class="social-icon" aria-label="Instagram Profile">
-                        <!-- Instagram Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                            <circle cx="12" cy="12" r="4"/>
-                            <line x1="17" y1="7" x2="17" y2="7"/>
-                        </svg>
+                        <i class="fab fa-instagram"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/iamdevinhill/" class="social-icon" aria-label="LinkedIn Profile">
-                        <!-- LinkedIn Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                            <rect x="2" y="9" width="4" height="12"/>
-                            <circle cx="4" cy="4" r="2"/>
-                        </svg>
+                        <i class="fab fa-linkedin"></i>
                     </a>
                     <a href="https://www.youtube.com/yourchannel" class="social-icon" aria-label="YouTube Profile">
-                        <!-- YouTube Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22.54 6.42c-.26-1.83-1.02-3.42-2.08-4.38-1.07-.97-2.42-1.54-3.84-1.74-3.06-.39-12.94-.39-16 0-1.42.2-2.77.77-3.84 1.74-1.06.96-1.82 2.55-2.08 4.38-.39 3.06-.39 7.26 0 10.32.26 1.83 1.02 3.42 2.08 4.38 1.07.97 2.42 1.54 3.84 1.74 3.06.39 12.94.39 16 0 1.42-.2 2.77-.77 3.84-1.74 1.06-.96 1.82-2.55 2.08-4.38.39-3.06.39-7.26 0-10.32zM9.6 15.07V8.93l6.14 3.07-6.14 3.07z"/>
-                        </svg>
+                        <i class="fab fa-youtube"></i>
                     </a>
                 </nav>
                 <div class="footer-bottom">
-                    <p>&copy; <span class="current-year"></span> <span class="brand-name">iamDevinHill</span>. All Rights Reserved.</p> <!-- Footer text with dynamic current year -->
+                    <p>&copy; <span class="current-year"></span> <span class="brand-name">iamDevinHill</span>. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>
+        
     </main>
 
-    <!-- External JavaScript file -->
     <script src="scripts.js"></script>
 </body>
 </html>

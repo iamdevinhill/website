@@ -400,3 +400,174 @@ body {
         padding: 40px 3%;
     }
 }
+
+:root {
+    /* Expanded Color Palette with More Nuanced Shades */
+    --dark-bg: #121212;
+    --darker-bg: #0a0a0a;
+    --accent-color: #108dda;
+    --accent-color-light: #3aa0e8;
+    --text-primary: #e0e0e0;
+    --text-secondary: #888;
+    --border-color: #333;
+    --neon-glow: rgba(17, 143, 219, 0.5);
+    
+    /* Typography Variables */
+    --font-primary: 'Montserrat', 'Arial', sans-serif;
+    --font-size-base: 16px;
+    --font-size-small: 0.875rem;
+    --font-size-large: 1.25rem;
+}
+
+/* Modern CSS Reset with More Comprehensive Approach */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-margin-top: 80px; /* Offset for fixed navbar */
+}
+
+/* Smooth Scrolling and Base Styles */
+html {
+    scroll-behavior: smooth;
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    overscroll-behavior-x: none; /* Prevent bounce effect on some browsers */
+    overflow-x: hidden;
+}
+
+/* Enhanced Glitch Animation */
+@keyframes glitch {
+    2%, 64% { 
+        transform: translate(2px, 0) skew(0deg); 
+    }
+    4%, 60% { 
+        transform: translate(-2px, 0) skew(0deg); 
+    }
+    62% { 
+        transform: translate(0, 0) skew(5deg); 
+    }
+}
+
+/* Improved Typography */
+h1, h2, h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+/* Navigation Styles with Enhanced Interactivity */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav a {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: 
+        color 0.3s ease, 
+        transform 0.2s ease;
+}
+
+.navbar-nav a:hover {
+    color: var(--accent-color-light);
+    transform: scale(1.05);
+}
+
+.navbar-nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Sections with More Dynamic Layout */
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 5%;
+    position: relative;
+    gap: 2rem;
+}
+
+/* Project Grid with Enhanced Hover Effects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.project-card {
+    background-color: var(--darker-bg);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(16, 141, 218, 0.2);
+}
+
+/* Responsive Typography */
+@media screen and (max-width: 768px) {
+    :root {
+        --font-size-base: 14px;
+    }
+
+    .navbar {
+        padding: 1rem 3%;
+    }
+
+    .section {
+        padding: 3rem 3%;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Additional Utility Classes and Fine-Tuning from Previous Design */
+/* [Rest of the previous CSS remains largely the same] */
