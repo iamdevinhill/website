@@ -9,7 +9,6 @@
     <link rel="preload" href="headshot.jpg" as="image">
     <link rel="icon" href="headshot.jpg" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
 </head>
 <body>
     <header>
@@ -25,6 +24,32 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <!-- Social Icons -->
+                <li class="social-icon-item">
+                    <a href="https://www.spotify.com/" class="social-icon" aria-label="Spotify Profile">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                </li>
+                <li class="social-icon-item">
+                    <a href="https://www.applemusic.com/" class="social-icon" aria-label="Apple Profile">
+                        <i class="fab fa-apple"></i>
+                    </a>
+                </li>
+                <li class="social-icon-item">
+                    <a href="https://www.instagram.com/thisisdevinhill/" class="social-icon" aria-label="Instagram Profile">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="social-icon-item">
+                    <a href="https://www.linkedin.com/in/iamdevinhill/" class="social-icon" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-icon-item">
+                    <a href="https://www.youtube.com/yourchannel" class="social-icon" aria-label="YouTube Profile">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -35,7 +60,9 @@
                 <img src="headshot.jpg" alt="Headshot of Devin Hill" class="headshot" width="300" height="300">
                 <div class="home-text">
                     <h1 class="glitch" data-text="I am Devin Hill">I am Devin Hill</h1>
-                    <p>Data and Artificial Intelligence Engineer, Producer, Musician, Songwriter.<br>Crafting digital solutions with code and creativity.</p>
+                    <div class="project-card">
+                        <p>Data and Artificial Intelligence Engineer, Producer, Musician, Songwriter.<br>Crafting digital solutions with code and creativity.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -50,14 +77,13 @@
                             
                             With a strong understanding of the metrics that drive success in both tech and music, I help scale projects and improve outcomes. Whether co-producing music, advising artists, or analyzing data, I apply a data-driven approach to every challenge.
                             
-                            Here is a playlist of some of my work, showcasing collaborations with talented peers.<br>
-
+                            Here is a playlist of some of my work, showcasing collaborations with talented peers.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="spotify-embed-container" style="background-color:#108dda; border-radius:12px; padding:10px; width:100%;">
+            <div class="spotify-embed-container" style="background-color:#108dda; border-radius:12px; padding:10px; width:75%;">
                 <iframe 
                     style="border-radius:12px; width:100%;" 
                     src="https://open.spotify.com/embed/playlist/2slrwyAxK3Pt02z9y9DGCO?utm_source=generator&theme=0" 
@@ -68,8 +94,6 @@
                     loading="lazy">
                 </iframe>
             </div>
-            
-            </div>
         </section>
 
         <section id="projects" class="section">
@@ -78,19 +102,19 @@
                 <div class="project-grid">
                     <div class="project-card">
                         <h3>Artificial Intelligence</h3>
-                        <p>Applications utilizing large language models (LLMs), speech-to-text, image generation.</p>
+                        <p>Create applications utilizing large language models (LLMs), speech-to-text, image generation for cutting edge solutions.</p>
                     </div>
                     <div class="project-card">
                         <h3>Data Visualization</h3>
-                        <p>Complex data visualizations and engineering with real-time analytics and dynamic reporting.</p>
+                        <p>Complex data visualizations and engineering with real-time analytics and dynamic reporting for better decision making.</p>
                     </div>
                     <div class="project-card">
                         <h3>Frontend Development</h3>
-                        <p>Dynamic user interfaces for websites and applications with fluency .</p>
+                        <p>Design dynamic, responsive user interfaces that ensure seamless navigation, smooth transitions, and optimal performance across devices.</p>
                     </div>
                 </div>
                 <br>
-                <h2 class="glitch" data-text="MY PROJECTS">MY MUSIC PROJECTS</h2>
+                <h2 class="glitch" data-text="MY MUSIC PROJECTS">MY MUSIC PROJECTS</h2>
                 <div class="project-grid">
                     <div class="project-card">
                         <h3>Co-production</h3>
@@ -98,11 +122,11 @@
                     </div>
                     <div class="project-card">
                         <h3>Listener Metrics</h3>
-                        <p>Evaluation of listener and social media ad campaign metrics for needed artist afiliation.</p>
+                        <p>Evaluation of listener, video, and social media ad campaign metrics for needed artist affiliation.</p>
                     </div>
                     <div class="project-card">
                         <h3>Artist Consulting</h3>
-                        <p>Gauged artist painpoints to adhere to their needs to scale, whether that be tech or production.</p>
+                        <p>Gauged artist pain points to adhere to their needs to scale, whether that be tech or production.</p>
                     </div>
                 </div>
             </div>
@@ -111,8 +135,11 @@
         <section id="contact" class="section">
             <div>
                 <h2 class="glitch" data-text="CONTACT">CONTACT</h2>
-                <p>For questions and additional information, please direct all inquiries here:</p>
-                <br>
+                <div class="project-card">
+                    <h3>Let's chat</h3>
+                    <p>For questions and additional information, please direct all inquiries here:</p>
+                </div>
+
                 <div class="contact-form">
                     <a href="mailto:devin.hill121192@gmail.com?subject=Business%20Inquiry&body=Dear%20Devin,%0D%0A%0D%0A
                         I%20would%20like%20to%20discuss%20[Insert%20your%20topic%20here].%0D%0A%0D%0A
@@ -127,7 +154,7 @@
         <footer class="footer">
             <div class="footer-content">
                 <nav class="social-links" aria-label="Social Media Links">
-                    <h2 class="glitch" data-text="CONNECT">Connect with me:</h2>
+                    <h2 class="glitch" data-text="CONNECT">Connect here:</h2>
                     <a href="https://www.spotify.com/" class="social-icon" aria-label="Spotify Profile">
                         <i class="fab fa-spotify"></i>
                     </a>
@@ -145,7 +172,7 @@
                     </a>
                 </nav>
                 <div class="footer-bottom">
-                    <p>&copy; <span class="current-year"></span> <span class="brand-name">iamDevinHill</span>. All Rights Reserved.</p>
+                    <p>&copy; <span id="current-year"></span> <span class="brand-name">iamDevinHill</span>. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>
