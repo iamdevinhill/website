@@ -1,77 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>John Doe | Dark Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile devices -->
+    <title>Devin Hill | Portfolio</title> <!-- The title of the webpage, visible in the browser tab -->
+    <meta name="description" content="Portfolio of Devin Hill - Data Scientist, AI Professional, Producer, Musician, and Writer"> <!-- Meta description for SEO -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file for styling -->
+    <link rel="preload" href="headshot.jpg" as="image"> <!-- Preload the headshot image for faster loading -->
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-brand glitch" data-text="JOHN DOE">JOHN DOE</div>
-        <!-- Hamburger Menu Icon -->
-        <div class="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="navbar-nav">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- Header and Navigation Bar -->
+    <header>
+        <nav class="navbar"> <!-- Navigation bar container -->
+            <div class="navbar-brand glitch" data-text="Devin Hill">Devin Hill</div> <!-- Branding text with a "glitch" effect -->
+            <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+                <!-- Button to toggle the mobile navigation menu -->
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+            <ul class="navbar-nav"> <!-- Navigation links -->
+                <li><a href="#home">Home</a></li> <!-- Link to the home section -->
+                <li><a href="#about">About</a></li> <!-- Link to the about section -->
+                <li><a href="#projects">Projects</a></li> <!-- Link to the projects section -->
+                <li><a href="#contact">Contact</a></li> <!-- Link to the contact section -->
+            </ul>
+        </nav>
+    </header>
 
-    <section id="home" class="section">
-        <div>
-            <h1 class="glitch" data-text="CREATIVE DEVELOPER">DEVELOPER</h1>
-            <p>Crafting digital solutions with code and creativity</p>
-        </div>
-    </section>
-
-    <section id="about" class="section">
-        <div>
-            <h2 class="glitch" data-text="ABOUT ME">ABOUT ME</h2>
-            <div class="about-content">
-                <img src="headshot.jpg" alt="John Doe's Headshot" class="headshot">
-                <p>A digital architect pushing the boundaries of web design and development. Transforming complex ideas into sleek, innovative digital solutions.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section">
-        <div>
-            <h2 class="glitch" data-text="MY PROJECTS">MY PROJECTS</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Yadayada</h3>
-                    <p>Advanced UI/UX design with cutting-edge interactive elements</p>
-                </div>
-                <div class="project-card">
-                    <h3>Data Shit</h3>
-                    <p>Complex data visualization platform with real-time analytics</p>
-                </div>
-                <div class="project-card">
-                    <h3>Whatever Else</h3>
-                    <p>Machine learning application exploring predictive algorithms</p>
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div>
+                <img src="headshot.jpg" alt="Headshot of Devin Hill" class="headshot" width="300" height="300"> <!-- Displaying Devin Hill's headshot -->
+                <div class="home-text">
+                    <h1 class="glitch" data-text="I am Devin Hill">I am Devin Hill</h1> <!-- Glitch effect title -->
+                    <p>Data and AI Engineer, Producer, Musician, Songwriter.<br>Crafting digital solutions with code and creativity.</p> <!-- Short intro text -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="section">
-        <div>
-            <h2 class="glitch" data-text="CONTACT">CONTACT</h2>
-            <form class="contact-form" id="contactForm">
-                <input type="text" placeholder="NAME" required>
-                <input type="email" placeholder="EMAIL" required>
-                <textarea placeholder="YOUR MESSAGE" rows="5" required></textarea>
-                <button type="submit">SEND</button>
-            </form>
-        </div>
-    </section>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div>
+                <h2 class="glitch" data-text="ABOUT ME">ABOUT ME</h2> <!-- Glitch effect heading -->
+                <div class="about-content">
+                    <p>A digital architect pushing the boundaries of web design and development. Transforming complex ideas into sleek, innovative digital solutions.</p> <!-- Description of the individual -->
+                </div>
+                <!-- Spotify Playlist Embed -->
+                <div style="background-color:#108dda; border-radius:12px; padding:10px;">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2slrwyAxK3Pt02z9y9DGCO?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> <!-- Embedded Spotify playlist -->
+                </div>
+            </div>
+        </section>
 
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div>
+                <h2 class="glitch" data-text="MY PROJECTS">MY PROJECTS</h2> <!-- Glitch effect heading -->
+                <div class="project-grid">
+                    <!-- Project Cards -->
+                    <div class="project-card">
+                        <h3>Data Science</h3> <!-- Project title -->
+                        <p>Advanced UI/UX design with cutting-edge interactive elements.</p> <!-- Short description of the project -->
+                    </div>
+                    <div class="project-card">
+                        <h3>Data Visualization</h3> <!-- Project title -->
+                        <p>Complex data visualization platform with real-time analytics.</p> <!-- Short description of the project -->
+                    </div>
+                    <div class="project-card">
+                        <h3>Machine Learning Explorer</h3> <!-- Project title -->
+                        <p>Machine learning application exploring predictive algorithms.</p> <!-- Short description of the project -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div>
+                <h2 class="glitch" data-text="CONTACT">CONTACT</h2> <!-- Glitch effect heading -->
+                <p>Direct all inquiries to the contact button below:</p> <!-- Instruction for the contact section -->
+                <div class="contact-form">
+                    <!-- Mailto Link for Contact -->
+                    <a href="mailto:devin.hill121192@gmail.com?subject=Business%20Inquiry&body=Dear%20Devin,%0D%0A%0D%0A
+                            I%20would%20like%20to%20discuss%20[Insert%20your%20topic%20here].%0D%0A%0D%0A
+                            Best%20regards,%0D%0A[Your%20Name]" 
+                        class="contact-form-button">
+                        CONTACT <!-- Button text -->
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-content">
+                <nav class="social-links" aria-label="Social Media Links"> <!-- Social media links navigation -->
+                    <h2 class="glitch" data-text="CONTACT">Connect with me:</h2> <!-- Glitch effect heading -->
+                    <!-- Social Media Icons -->
+                    <a href="https://www.instagram.com/thisisdevinhill/" class="social-icon" aria-label="Instagram Profile">
+                        <!-- Instagram Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <line x1="17" y1="7" x2="17" y2="7"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/iamdevinhill/" class="social-icon" aria-label="LinkedIn Profile">
+                        <!-- LinkedIn Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/yourchannel" class="social-icon" aria-label="YouTube Profile">
+                        <!-- YouTube Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22.54 6.42c-.26-1.83-1.02-3.42-2.08-4.38-1.07-.97-2.42-1.54-3.84-1.74-3.06-.39-12.94-.39-16 0-1.42.2-2.77.77-3.84 1.74-1.06.96-1.82 2.55-2.08 4.38-.39 3.06-.39 7.26 0 10.32.26 1.83 1.02 3.42 2.08 4.38 1.07.97 2.42 1.54 3.84 1.74 3.06.39 12.94.39 16 0 1.42-.2 2.77-.77 3.84-1.74 1.06-.96 1.82-2.55 2.08-4.38.39-3.06.39-7.26 0-10.32zM9.6 15.07V8.93l6.14 3.07-6.14 3.07z"/>
+                        </svg>
+                    </a>
+                </nav>
+                <div class="footer-bottom">
+                    <p>&copy; <span class="current-year"></span> <span class="brand-name">iamDevinHill</span>. All Rights Reserved.</p> <!-- Footer text with dynamic current year -->
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- External JavaScript file -->
     <script src="scripts.js"></script>
 </body>
 </html>
