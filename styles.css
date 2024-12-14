@@ -104,7 +104,6 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    border-bottom: 1px solid var(--border-color);
 }
 
 .navbar-brand {
@@ -138,7 +137,6 @@ body {
 .navbar-nav a.active {
     color: var(--accent-color);
     font-weight: bold;
-    border-bottom: 2px solid var(--accent-color);
 }
 
 .navbar-nav a::after {
