@@ -1,12 +1,15 @@
 :root {
+    /* Color Palette */
     --dark-bg: #121212;
     --darker-bg: #0a0a0a;
-    --accent-color: #118fdb;
+    --accent-color: #108dda;
     --text-primary: #e0e0e0;
     --text-secondary: #888;
     --border-color: #333;
+    --neon-glow: rgba(17, 143, 219, 0.5);
 }
 
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +19,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Smooth scrolling for better UX */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -28,13 +31,14 @@ body {
     overflow-x: hidden;
 }
 
-/* Grungy Glitch Effects */
+/* Glitch Animation */
 @keyframes glitch {
     2%, 64% { transform: translate(2px, 0) skew(0deg); }
     4%, 60% { transform: translate(-2px, 0) skew(0deg); }
     62% { transform: translate(0, 0) skew(5deg); }
 }
 
+/* About Section */
 .about-content {
     display: flex;
     flex-direction: column;
@@ -43,13 +47,14 @@ body {
 }
 
 .headshot {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--accent-color);
 }
 
+/* Glitch Text Effect */
 .glitch {
     position: relative;
     text-transform: uppercase;
@@ -129,7 +134,7 @@ body {
 .navbar-nav a.active {
     color: var(--accent-color);
     font-weight: bold;
-    border-bottom: 2px solid var(--accent-color); /* Active link indicator */
+    border-bottom: 2px solid var(--accent-color);
 }
 
 .navbar-nav a::after {
@@ -224,7 +229,7 @@ body {
 
 .project-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 10px 20px rgba(16, 141, 218, 0.5);
 }
 
 /* Contact Form */
@@ -250,23 +255,78 @@ body {
     border-color: var(--accent-color);
 }
 
-.contact-form button {
+.contact-form-button {
+    display: inline-block;
+    width: 100%;
     background-color: var(--accent-color);
     color: var(--dark-bg);
-    border: none;
+    text-align: center;
     padding: 12px 25px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 100%;
+    border-radius: 8px;
+    border: none;
 }
 
-.contact-form button:hover {
+.contact-form-button:hover {
     background-color: white;
+    color: var(--dark-bg);
 }
 
-/* Responsive Adjustments */
+/* Footer */
+.footer {
+    background-color: var(--darker-bg);
+    color: var(--text-primary);
+    padding: 40px 5%;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo .glitch {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.social-icon {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+    color: var(--accent-color);
+    transform: scale(1.2);
+    outline: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 10px;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
     /* Mobile Navigation */
     .navbar {
@@ -327,62 +387,28 @@ body {
     .project-card {
         margin-bottom: 20px;
     }
-}
-/* Ensure the menu toggle is hidden on desktop */
-.menu-toggle {
-    display: none; /* Initially hidden */
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 1001;
-}
 
-.menu-toggle span {
-    height: 3px;
-    width: 25px;
-    background-color: var(--text-primary);
-    margin: 4px 0;
-    transition: 0.4s;
+    .footer {
+        padding: 30px 3%;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-icon {
+        font-size: 1.2rem;
+    }
 }
 
-/* Mobile Navigation */
-@media screen and (max-width: 768px) {
-    /* Display the hamburger icon */
-    .menu-toggle {
-        display: flex;
-    }
+/* Animations */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
 
-    .navbar-nav {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100vh;
-        background-color: var(--dark-bg);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: left 0.3s ease;
-        z-index: 1000;
-    }
-
-    .navbar-nav.active {
-        left: 0;
-    }
-
-    .navbar-nav li {
-        margin: 20px 0;
-    }
-
-    /* Toggle the hamburger icon to a close icon */
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
+/* Accessibility Enhancements */
+.social-icon:focus-visible {
+    color: var(--accent-color);
+    transform: scale(1.2);
 }
