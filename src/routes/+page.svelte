@@ -25,7 +25,7 @@
 	<div class="container">
 		<div class="hero-content">
 			<div class="hero-image">
-				<img src="../src/lib/images/headshot.jpg" alt="Devin Hill" />
+				<img src="../src/lib/images/headshot.jpg" alt="headshot" />
 			</div>
 			<div class="hero-text">
 				<h1>Devin Hill</h1>
