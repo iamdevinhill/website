@@ -3,42 +3,44 @@
 	const projects = [
 		{
 			title: 'Artificial Intelligence',
-			description: 'Create applications utilizing large language models (LLMs), data anlaysis, and speech-to-text, for cutting edge solutions.',
-			tags: ['Ollama', 'Python', 'AWS', 'Data Analysis'],
-			image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
+			description: 'Create applications utilizing large language models (LLMs), data analysis, and speech-to-text, for cutting edge solutions.',
+			tags: [],
+			image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=1080'
 		},
 		{
 			title: 'Data Visualization',
-			description: 'Complex data visualizations and engineering with real-time analytics and dynamic reporting for better decision making..',
-			tags: ['Big Data', 'Apache Kafka', 'Spark', 'Real-time Analytics'],
-			image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1034&q=80'
+			description: 'Complex data visualizations and engineering with real-time analytics and dynamic reporting for better decision making.',
+			tags: [],
+			image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=1080'
 		},
 		{
 			title: 'Frontend Development',
 			description: 'Design dynamic, responsive user interfaces that ensure seamless navigation, smooth transitions, and optimal performance across devices.',
-			tags: ['Predictive Analytics', 'Time Series', 'Python', 'TensorFlow'],
-			image: 'https://images.unsplash.com/photo-158109292146-7031e4f48f6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
+			tags: [],
+			image: 'https://images.unsplash.com/photo-1572495129332-1fdc6222e98e?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=1080'
 		},
 		{
 			title: 'Music Production',
 			description: 'Various projects that have had production, songwriting, and instrumentals incorporated.',
-			tags: ['NLP', 'BERT', 'Docker', 'Microservices'],
-			image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
+			tags: [],
+			image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=1080'
 		},
 		{
 			title: 'Listener Metrics',
 			description: 'Evaluation of listener, video, and social media ad campaign metrics for needed artist affiliation.',
-			tags: ['Deep Learning', 'Music', 'TensorFlow', 'LSTM'],
-			image: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
+			tags: [],
+			image: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=1080'
 		},
 		{
 			title: 'Artist Consulting',
 			description: 'Gauge artist pain points to adhere to their needs to scale, whether that be tech or production.',
-			tags: ['Data Visualization', 'D3.js', 'React', 'Business Intelligence'],
-			image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
+			tags: [],
+			image: 'https://images.unsplash.com/photo-1600675278580-67907b22e09a?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=1080'
 		}
 	];
 </script>
+
+
 
 <svelte:head>
 	<title>Projects | Devin Hill</title>
@@ -64,9 +66,9 @@
 						<h2>{project.title}</h2>
 						<p>{project.description}</p>
 						<div class="project-tags">
-							{#each project.tags as tag}
+							<!-- {#each project.tags as tag}
 								<span class="tag">{tag}</span>
-							{/each}
+							{/each} -->
 						</div>
 					</div>
 				</div>
@@ -190,15 +192,6 @@
 		gap: 0.5rem;
 	}
 
-	.tag {
-		background-color: var(--color-bg-2);
-		color: var(--color-text-light);
-		padding: 0.3rem 0.8rem;
-		border-radius: 20px;
-		font-size: 0.8rem;
-		font-weight: 500;
-	}
-
 	.bg-light {
 		background-color: var(--color-bg-2);
 	}
@@ -233,7 +226,7 @@
 	}
 
 	.embed-container {
-		background-color: var(--color-bg-1);
+		background-color: var(--color-bg-0);
 		border-radius: 8px;
 		padding: 1.5rem;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);

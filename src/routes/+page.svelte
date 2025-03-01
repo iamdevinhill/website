@@ -237,6 +237,11 @@
 		.skills-grid {
 			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 		}
+
+		.skill-card h3 {
+		font-size: 1rem;
+		font-weight: 600;
+	}
 		
 		.spotify-embed-container {
 			width: 100%;

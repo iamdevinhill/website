@@ -112,7 +112,7 @@
 			</nav>
 			
 			<div class="social mobile-social">
-				<a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+				<a href="https://linkedin.com/in/iamdevinhill" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
 					<i class="fab fa-linkedin"></i>
 				</a>
 				<a href="https://github.com/iamdevinhill" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -191,7 +191,7 @@
 		padding: 0 0.5rem;
 		color: var(--color-text);
 		font-weight: 500;
-		font-size: 1rem;
+		font-size: 1.2rem;
 		text-decoration: none;
 		transition: color 0.2s;
 	}
