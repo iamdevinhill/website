@@ -1,0 +1,126 @@
+@import '@fontsource/fira-mono';
+
+:root {
+	--font-body: "Consolas", "Courier New", monospace;
+	--font-mono: 'Fira Mono', monospace;
+	--color-bg-0: #121212;
+	--color-bg-1: #1e1e1e;
+	--color-bg-2: #2d2d2d;
+	--color-theme-1: #3b82f6;
+	--color-theme-2: #4075a6;
+	--color-text: #e0e0e0;
+	--color-text-light: #a0a0a0;
+	--column-width: 42rem;
+	--column-margin-top: 4rem;
+	font-family: var(--font-body);
+	color: var(--color-text);
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	background-color: var(--color-bg-0);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-bottom: 0.8rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+	margin-bottom: 0.6rem;
+}
+
+p {
+	line-height: 1.6;
+	margin-bottom: 1rem;
+}
+
+a {
+	color: var(--color-theme-1);
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+a:hover {
+	color: var(--color-theme-2);
+	text-decoration: underline;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+.btn {
+	display: inline-block;
+	background-color: var(--color-theme-1);
+	color: white;
+	padding: 0.8rem 1.5rem;
+	border-radius: 4px;
+	font-weight: 500;
+	transition: background-color 0.2s;
+}
+
+.btn:hover {
+	background-color: var(--color-theme-2);
+	text-decoration: none;
+	color: white;
+}
+
+.section {
+	padding: 4rem 0;
+}
+
+.card {
+	background-color: var(--color-bg-1);
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.text-center {
+	text-align: center;
+}
+
+.social-icon {
+	font-size: 1.5rem;
+	margin: 0 0.5rem;
+	color: var(--color-text);
+	transition: color 0.2s;
+}
+
+.social-icon:hover {
+	color: var(--color-theme-1);
+}
+
+.visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}
