@@ -1,5 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
+	import headshot from '$lib/images/headshot.jpg';
+
 	
 	// Skills data
 	const skills = [
@@ -25,7 +27,7 @@
 	<div class="container">
 		<div class="hero-content">
 			<div class="hero-image">
-				<img src="../src/lib/images/headshot.jpg" alt="headshot" />
+				<img src={headshot} alt="headshot" />
 			</div>
 			<div class="hero-text">
 				<h1>Devin Hill</h1>
