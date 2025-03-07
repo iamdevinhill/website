@@ -93,8 +93,7 @@
 		</div>
 	</div>
 	
-	<!-- Full Screen Mobile Menu -->
-	{#if isMenuOpen || typeof window === 'undefined'}
+	<!-- Full Screen Mobile Menu - Always render but control visibility with CSS -->
 	<div class="mobile-menu" class:open={isMenuOpen} aria-hidden={!isMenuOpen}>
 		<div class="mobile-menu-content">
 			<nav>
@@ -121,7 +120,6 @@
 			</div>
 		</div>
 	</div>
-	{/if}
 </header>
 
 <style>
@@ -216,63 +214,74 @@
 		color: var(--color-theme-1);
 	}
 	
-	/* Hamburger Menu */
-	.hamburger {
-		display: none;
-		background: none;
-		border: none;
-		cursor: pointer;
-		padding: 10px;  /* Added padding around hamburger */
-		margin-right: 10px; /* Adjust position to account for padding */
-		width: 50px;    /* Increased width to account for padding */
-		height: 44px;   /* Increased height to account for padding */
-		position: relative;
-		z-index: 1000;
-	}
+	/* Hamburger Menu with transition */
+    .hamburger {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        margin-right: 10px;
+        width: 50px;
+        height: 44px;
+        position: relative;
+        z-index: 1000;
+        transition: transform 0.2s ease; /* Add transition for the entire button */
+    }
+
+    /* Optional: Add a subtle transform when clicked */
+    .hamburger:active {
+        transform: scale(0.95);
+    }
+
+    .hamburger span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: var(--color-text);
+        margin: 5px 0;
+        /* Make the span transitions a bit faster and more responsive */
+        transition: transform 0.25s ease, opacity 0.2s ease;
+    }
+
+    .hamburger span.open:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .hamburger span.open:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger span.open:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
 	
-	.hamburger span {
-		display: block;
-		width: 30px;    /* Keep the actual bars the same width */
-		height: 3px;
-		background-color: var(--color-text);
-		margin: 5px 0;
-		transition: transform 0.3s ease, opacity 0.3s ease;
-	}
-	
-	.hamburger span.open:nth-child(1) {
-		transform: rotate(45deg) translate(6px, 6px);
-	}
-	
-	.hamburger span.open:nth-child(2) {
-		opacity: 0;
-	}
-	
-	.hamburger span.open:nth-child(3) {
-		transform: rotate(-45deg) translate(6px, -6px);
-	}
-	
-	/* Full Screen Mobile Menu */
-	.mobile-menu {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100vh;
-		background-color: var(--color-bg-1);
-		z-index: 999;
-		opacity: 0;
-		visibility: hidden;
-		transition: opacity 0.3s ease, visibility 0.3s ease;
-		overflow: hidden; /* Prevent scrolling entirely */
-		display: flex;    /* Add flex display */
-		justify-content: center; /* Center content horizontally */
-		align-items: center;     /* Center content vertically */
-	}
-	
-	.mobile-menu.open {
-		opacity: 1;
-		visibility: visible;
-	}
+	/* Full Screen Mobile Menu - Updated with faster slide-in animation */
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-bg-1);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        /* Position menu off-screen to the right by default */
+        transform: translateX(100%);
+        /* Faster animation: reduced from 0.4s to 0.25s for transform */
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.25s ease;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile-menu.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
 	
 	.mobile-menu-content {
 		display: flex;
