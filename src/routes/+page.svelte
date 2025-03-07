@@ -20,7 +20,7 @@
 
 <svelte:head>
 	<title>Devin Hill | Data & AI Engineer | Artist | Leader</title>
-	<meta name="description" content="Personal website of Devin Hill, Data/AI Engineer and Musician" />
+	<meta name="description" content="Personal website of Devin Hill, Data & AI Engineer and Musician" />
 </svelte:head>
 
 <section class="hero">
