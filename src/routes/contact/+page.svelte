@@ -72,8 +72,8 @@
 			<p>
 			  Feel free to reach out via email. I typically respond within 24-48 hours.
 			</p>
-			<a href="mailto:{contactInfo.email}?subject=Inquiry%20about%20Collaboration%20or%20Project%20Opportunity&body=Hi%20Devin,%0A%0AI%20hope%20this%20email%20finds%20you%20well.%20I%20recently%20came%20across%20your%20contact%20information%20and%20am%20reaching%20out%20to%20inquire%20about%20potential%20collaboration%20or%20project%20opportunities.%0A%0AI%20am%20interested%20in%20discussing%20how%20we%20might%20work%20together,%20whether%20it's%20in%20the%20realm%20of%20data%20solutions,%20music,%20or%20another%20area.%20If%20you%20are%20open%20to%20new%20opportunities,%20I%20would%20love%20to%20explore%20ways%20we%20can%20collaborate.%0A%0APlease%20let%20me%20know%20your%20availability,%20and%20we%20can%20schedule%20a%20time%20to%20discuss%20further.%0A%0AI%20look%20forward%20to%20connecting%20with%20you!%0A%0ABest%20regards,%0A%5BYour%20Name%5D%0A%5BYour%20Contact%20Information%5D" class="btn btn-large">Send Me a Message</a>
-		  </div>
+			<a href="mailto:{contactInfo.email}?subject=Exploring Collaboration&body=Hi Devin,%0D%0A%0D%0AI hope you're doing well. I came across your contact information and wanted to reach out about potential collaboration opportunities. If you're open to a conversation, I'd love to connect and explore possibilities.%0D%0A%0D%0ALooking forward to your thoughts!%0D%0A%0D%0ABest,%0D%0A[Your Name]%0D%0A[Your Contact Information]" class="btn btn-large">Send Me a Message</a>
+		</div>
 		</div>
 	  </div>
 	</div>
