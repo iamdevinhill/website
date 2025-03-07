@@ -5,37 +5,37 @@
 			title: 'Artificial Intelligence',
 			description: 'Create applications utilizing large language models (LLMs), data analysis, and speech-to-text, for cutting edge solutions.',
 			tags: [],
-			image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=1080'
+			image: '/ai.jpg'
 		},
 		{
 			title: 'Data Visualization',
 			description: 'Complex data visualizations and engineering with real-time analytics and dynamic reporting for better decision making.',
 			tags: [],
-			image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=1080'
+			image: '/data1.jpg'
 		},
 		{
 			title: 'Frontend Development',
 			description: 'Design dynamic, responsive user interfaces that ensure seamless navigation, smooth transitions, and optimal performance across devices.',
 			tags: [],
-			image: 'https://images.unsplash.com/photo-1572495129332-1fdc6222e98e?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=1080'
+			image: '/front.jpg'
 		},
 		{
 			title: 'Music Production',
 			description: 'Various projects that have had production, songwriting, and instrumentals incorporated.',
 			tags: [],
-			image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=1080'
+			image: '/prod1.jpg'
 		},
 		{
 			title: 'Listener Metrics',
 			description: 'Evaluation of listener, video, and social media ad campaign metrics for needed artist affiliation.',
 			tags: [],
-			image: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=1080'
+			image: '/metrics.jpg'
 		},
 		{
 			title: 'Artist Consulting',
 			description: 'Gauge artist pain points to adhere to their needs to scale, whether that be tech or production.',
 			tags: [],
-			image: 'https://images.unsplash.com/photo-1600675278580-67907b22e09a?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-1.2.1&q=80&w=1080'
+			image: '/consult.jpg'
 		}
 	];
 </script>

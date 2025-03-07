@@ -48,7 +48,7 @@
 		<div class="about-content">
 			<div class="about-text">
 				<p>
-					I am a Data and AI Engineer with a Bachelor's in Data Science and a Master's in Organizational Leadership, specializing in management. My passion for music blends with my expertise in technology, creating a unique perspective on innovation. I focus on the intersection of AI, data analytics, and creativity, working on projects involving large language models, data visualization, and real-time reporting. 
+					I am a Data and AI Engineer with a Bachelor's degree in Data Science, Master's in Organizational Leadership with concentration in management and pursuing my MBA. With over a decade in the workforce, my expertise in technology and people create a unique perspective of innovation. I focus on the intersection of AI, data analytics, and creativity, working on projects involving large language models, data visualization, and real-time reporting. 
 					With a strong understanding of the metrics that drive success in both tech and music, I help scale projects and improve outcomes. Whether producing music, advising artists, or analyzing data, I apply a data-driven approach to every challenge. 				
 				</p>
 			</div>
