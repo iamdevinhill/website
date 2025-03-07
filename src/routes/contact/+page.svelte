@@ -9,9 +9,7 @@
 	// Social media links
 	const socialLinks = [
 	  { name: 'LinkedIn', url: 'https://linkedin.com/in/iamdevinhill', icon: 'fa-linkedin' },
-	  { name: 'GitHub', url: 'https://github.com/iamdevinhill', icon: 'fa-github' },
-	  // { name: 'Twitter', url: 'https://twitter.com/', icon: 'fa-twitter' },
-	  // { name: 'Instagram', url: 'https://instagram.com/', icon: 'fa-instagram' }
+	  { name: 'GitHub', url: 'https://github.com/iamdevinhill', icon: 'fa-github' }
 	];
   </script>
   

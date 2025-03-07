@@ -8,7 +8,7 @@
 		{ name: 'Data Engineering', icon: 'fa-database' },
 		{ name: 'Python', icon: 'fa-python' },
 		{ name: 'SQL', icon: 'fa-table' },
-		{ name: 'Data Visualization', icon: 'fa-chart-line' },
+		{ name: 'Data Visuals', icon: 'fa-chart-line' },
 		{ name: 'Data Analysis', icon: 'fa-chart-bar' },
 		{ name: 'Web Development', icon: 'fa-code' },
 		{ name: 'Artificial Intelligence', icon: 'fa-brain' },
