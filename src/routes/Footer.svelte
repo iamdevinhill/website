@@ -27,7 +27,7 @@
 	footer {
 		background-color: var(--color-bg-2);
 		padding: 2rem 0;
-		margin-top: 2rem;
+		margin-top: 1rem;
 	}
 
 	.footer-content {

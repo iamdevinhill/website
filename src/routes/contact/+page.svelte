@@ -81,7 +81,7 @@
   
   <style>
 	.contact-header {
-	  background-color: var(--color-theme-1);
+	  background-color: var(--color-bg-1);
 	  color: white;
 	  padding: 1rem 0;
 	  text-align: center;

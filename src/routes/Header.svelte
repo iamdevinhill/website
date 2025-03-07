@@ -134,8 +134,8 @@
 	}
 	
 	header {
-		background-color: var(--color-bg-1);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+		background-color: var(--color-bg-0);
+		box-shadow: 0 2px 4px rgba(59, 130, 246, 1);
 		position: sticky;
 		top: 0;
 		z-index: 100;
