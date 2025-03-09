@@ -81,7 +81,7 @@
 	<div class="container">
 		<h2 class="section-title">My Music</h2>
 		<p class="section-description">Here's a playlist featuring some of my work, collaborations,
-			and the work of my peers. Check it out.</p>
+			and the work of my peers. Want to sound as good as these? Hit up the contact page and let's make it happen.</p>
 		
 		<div class="music-embeds">
 			<div class="embed-container">
@@ -135,6 +135,7 @@
 	.spotify-embed-container iframe {
 		border-radius: 12px;
 		width: 100%;
+		
 	}
 
 	.grid {
@@ -147,7 +148,7 @@
 		background-color: var(--color-bg-1);
 		border-radius: 8px;
 		overflow: hidden;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 2px 4px rgba(59, 130, 246, 1);
 		transition: transform 0.3s, box-shadow 0.3s;
 	}
 
@@ -229,7 +230,7 @@
 		background-color: var(--color-bg-0);
 		border-radius: 8px;
 		padding: 1.5rem;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 2px 4px rgba(59, 130, 246, 1);
 	}
 
 	.embed-container h3 {

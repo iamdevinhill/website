@@ -25,7 +25,7 @@
 
 <style>
 	footer {
-		background-color: var(--color-bg-2);
+		background-color: var(--color-bg-0);
 		padding: 2rem 0;
 		margin-top: 1rem;
 	}
