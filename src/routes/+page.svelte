@@ -48,7 +48,7 @@
 		<div class="about-content">
 			<div class="about-text">
 				<p>
-					I am a Data and AI Engineer with a Bachelor's in Data Science, a Master's in Organizational Leadership (Management), and an MBA in progress. With over a decade of experience, I blend technology and people-driven innovation. My work spans AI, data analytics, and creativity, focusing on large language models, data visualization, and real-time reporting. Leveraging a deep understanding of success metrics in tech and music, I help scale projects and optimize outcomes with a data-driven approach.</p>
+					I am a Data and AI Engineer with a Bachelor's in Data Science and a Master's in Organizational Leadership (Management). With over a decade of experience in the workforce, I blend technology and people-driven innovation. My work spans AI, data analytics, and creativity, focusing on large language models, data visualization, and real-time reporting. Leveraging a deep understanding of success metrics in tech and music, I help scale projects and optimize outcomes with a data-driven approach.</p>
 			</div>
 		</div>
 	</div>
