@@ -31,7 +31,7 @@
 			</div>
 			<div class="hero-text">
 				<h1>Devin Hill</h1>
-				<h2>Data & AI Engineer | Artist | Leader</h2>
+				<h2>Data & AI Engineer | Leader</h2>
 				<p>Transforming data into opportunities.</p>
 				<div class="hero-buttons">
 					<a href="/projects" class="btn">View Projects</a>
@@ -48,7 +48,7 @@
 		<div class="about-content">
 			<div class="about-text">
 				<p>
-					I am a Data and AI Engineer with a Bachelor's in Data Science and a Master's in Management (concentration in Organizational Leadership). With over a decade of experience in the workforce, I blend technology and people-driven innovation. My work spans AI, data analytics, and creativity, focusing on large language models, data visualization, and real-time reporting. Leveraging a deep understanding of success metrics in tech and music, I help scale projects and optimize outcomes with a data-driven approach.</p>
+					I am a Data and AI Engineer with a Bachelor's in Data Science and a Master's in Management (concentration in Organizational Leadership). With over a decade of experience in the workforce, I blend technology and people-driven innovation. My work spans AI, data analytics, and creativity, focusing on large language models, data visualization, and real-time reporting. Leveraging a deep understanding of success metrics from defense and aerospace to musical artists, I help scale projects and optimize outcomes with a data-driven approach. Contact me for resume.</p>
 			</div>
 		</div>
 	</div>
