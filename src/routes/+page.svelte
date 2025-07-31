@@ -19,7 +19,7 @@
 </script>
 
 <svelte:head>
-	<title>Devin Hill | AI/ML Engineer | Artist | Leader</title>
+	<title>Devin Hill | AI/ML Engineer | Leader</title>
 	<meta name="description" content="Personal website of Devin Hill, AI/ML Engineer and Musician" />
 </svelte:head>
 
