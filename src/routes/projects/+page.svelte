@@ -44,7 +44,7 @@
 
 <svelte:head>
 	<title>Projects | Devin Hill</title>
-	<meta name="description" content="Data and AI projects by Devin Hill" />
+	<meta name="description" content="Lead AI/ML projects by Devin Hill" />
 </svelte:head>
 
 <section class="projects-header">
