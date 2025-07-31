@@ -19,8 +19,8 @@
 </script>
 
 <svelte:head>
-	<title>Devin Hill | Data & AI Engineer | Artist | Leader</title>
-	<meta name="description" content="Personal website of Devin Hill, Data & AI Engineer and Musician" />
+	<title>Devin Hill | AI/ML Engineer | Artist | Leader</title>
+	<meta name="description" content="Personal website of Devin Hill, AI/ML Engineer and Musician" />
 </svelte:head>
 
 <section class="hero">
@@ -31,7 +31,7 @@
 			</div>
 			<div class="hero-text">
 				<h1>Devin Hill</h1>
-				<h2>Data & AI Engineer | Leader</h2>
+				<h2>AI/ML Engineer | Leader</h2>
 				<p>Transforming data into opportunities.</p>
 				<div class="hero-buttons">
 					<a href="/projects" class="btn">View Projects</a>
