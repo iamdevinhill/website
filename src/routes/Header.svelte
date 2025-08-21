@@ -45,6 +45,26 @@
 			};
 		}
 	});
+
+	function scrollToSection(sectionId) {
+		if (browser) {
+			const element = document.getElementById(sectionId);
+			if (element) {
+				// Close mobile menu first if it's open
+				if (isMenuOpen) {
+					toggleMenu();
+				}
+				
+				// Add a small delay to ensure menu is closed before scrolling
+				setTimeout(() => {
+					element.scrollIntoView({ 
+						behavior: 'smooth',
+						block: 'start'
+					});
+				}, 100);
+			}
+		}
+	}
 </script>
 
 <header>
@@ -57,14 +77,14 @@
 			<!-- Desktop Navigation -->
 			<nav class="desktop-nav">
 				<ul>
-					<li class:active={$page.url.pathname === '/'} aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+					<li>
 						<a href="/">Home</a>
 					</li>
-					<li class:active={$page.url.pathname === '/projects'} aria-current={$page.url.pathname === '/projects' ? 'page' : undefined}>
-						<a href="/projects">Projects</a>
+					<li>
+						<button on:click={() => scrollToSection('projects')} class="nav-link">Projects</button>
 					</li>
-					<li class:active={$page.url.pathname === '/contact'} aria-current={$page.url.pathname === '/contact' ? 'page' : undefined}>
-						<a href="/contact">Contact</a>
+					<li>
+						<button on:click={() => scrollToSection('contact')} class="nav-link">Contact</button>
 					</li>
 				</ul>
 			</nav>
@@ -98,14 +118,14 @@
 		<div class="mobile-menu-content">
 			<nav>
 				<ul>
-					<li class:active={$page.url.pathname === '/'} aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+					<li>
 						<a href="/" on:click={toggleMenu}>Home</a>
 					</li>
-					<li class:active={$page.url.pathname === '/projects'} aria-current={$page.url.pathname === '/projects' ? 'page' : undefined}>
-						<a href="/projects" on:click={toggleMenu}>Projects</a>
+					<li>
+						<button on:click={() => scrollToSection('projects')} class="nav-link">Projects</button>
 					</li>
-					<li class:active={$page.url.pathname === '/contact'} aria-current={$page.url.pathname === '/contact' ? 'page' : undefined}>
-						<a href="/contact" on:click={toggleMenu}>Contact</a>
+					<li>
+						<button on:click={() => scrollToSection('contact')} class="nav-link">Contact</button>
 					</li>
 				</ul>
 			</nav>
@@ -123,7 +143,11 @@
 </header>
 
 <style>
-	/* Global styles to prevent horizontal scrolling */
+	/* Global styles to prevent horizontal scrolling and enable smooth scrolling */
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+	
 	:global(html, body) {
 		overflow-x: hidden;
 		width: 100%;
@@ -176,13 +200,7 @@
 		margin: 0 0.5rem;
 	}
 
-	li[aria-current='page'] a,
-	li.active a {
-		color: var(--color-theme-1);
-		font-weight: 600;
-	}
-
-	nav a {
+	nav a, .nav-link {
 		display: flex;
 		height: 100%;
 		align-items: center;
@@ -192,9 +210,13 @@
 		font-size: 1.2rem;
 		text-decoration: none;
 		transition: color 0.2s;
+		background: none;
+		border: none;
+		cursor: pointer;
+		font-family: inherit;
 	}
 
-	nav a:hover {
+	nav a:hover, .nav-link:hover {
 		color: var(--color-theme-1);
 	}
 
@@ -314,7 +336,7 @@
 		text-align: center;
 	}
 	
-	.mobile-menu a {
+	.mobile-menu a, .mobile-menu .nav-link {
 		padding: 0.75rem;
 		width: 100%;
 		font-size: 2rem;
@@ -358,7 +380,7 @@
 			margin: 1rem 0;
 		}
 		
-		.mobile-menu a {
+		.mobile-menu a, .mobile-menu .nav-link {
 			font-size: 1.75rem;
 		}
 		
