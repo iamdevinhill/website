@@ -69,6 +69,27 @@
 		{ name: 'GitHub', url: 'https://github.com/iamdevinhill', icon: 'fa-github' }
 	];
 
+	// Scroll to top functionality
+	let showScrollButton = false;
+
+	function scrollToTop() {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+	}
+
+	onMount(() => {
+		function handleScroll() {
+			showScrollButton = window.scrollY > 300;
+		}
+
+		window.addEventListener('scroll', handleScroll);
+		
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
 
 </script>
 
@@ -233,6 +254,16 @@
 		</div>
 	</div>
 </section>
+
+<!-- Scroll to top button -->
+<button 
+	class="scroll-to-top" 
+	on:click={scrollToTop}
+	class:visible={showScrollButton}
+	aria-label="Scroll to top"
+>
+	<i class="fas fa-chevron-up"></i>
+</button>
 
 <style>
 	.hero {
@@ -613,6 +644,56 @@
 
 		.contact-info {
 			margin-bottom: 3rem;
+		}
+	}
+
+	/* Scroll to top button */
+	.scroll-to-top {
+		position: fixed;
+		bottom: 2rem;
+		right: 2rem;
+		width: 50px;
+		height: 50px;
+		background-color: var(--color-theme-1);
+		color: white;
+		border: none;
+		border-radius: 50%;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.2rem;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(20px);
+		transition: all 0.3s ease;
+		z-index: 1000;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	}
+
+	.scroll-to-top.visible {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	.scroll-to-top:hover {
+		background-color: var(--color-theme-2);
+		transform: translateY(-3px);
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+	}
+
+	.scroll-to-top:active {
+		transform: translateY(-1px);
+	}
+
+	@media (max-width: 768px) {
+		.scroll-to-top {
+			bottom: 1.5rem;
+			right: 1.5rem;
+			width: 45px;
+			height: 45px;
+			font-size: 1rem;
 		}
 	}
 </style>
