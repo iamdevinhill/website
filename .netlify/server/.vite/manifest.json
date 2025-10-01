@@ -8,6 +8,13 @@
       "_internal.js"
     ]
   },
+  "_client.js": {
+    "file": "chunks/client.js",
+    "name": "client",
+    "imports": [
+      "_exports.js"
+    ]
+  },
   "_exports.js": {
     "file": "chunks/exports.js",
     "name": "exports"
@@ -19,21 +26,9 @@
       "_ssr.js"
     ]
   },
-  "_prod-ssr.js": {
-    "file": "chunks/prod-ssr.js",
-    "name": "prod-ssr"
-  },
   "_ssr.js": {
     "file": "chunks/ssr.js",
     "name": "ssr"
-  },
-  "_stores.js": {
-    "file": "chunks/stores.js",
-    "name": "stores",
-    "imports": [
-      "_ssr.js",
-      "_exports.js"
-    ]
   },
   "node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-400-normal.woff": {
     "file": "_app/immutable/assets/fira-mono-cyrillic-400-normal.Dq7SlH2J.woff",
@@ -90,7 +85,7 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_stores.js"
+      "_client.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
@@ -99,7 +94,6 @@
     "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js",
     "isEntry": true,
     "imports": [
-      "_prod-ssr.js",
       "_internal.js",
       "_exports.js",
       "_ssr.js"
@@ -116,10 +110,10 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_stores.js"
+      "_client.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.BmTqnJrc.css"
+      "_app/immutable/assets/_layout.BsT02Zfo.css"
     ],
     "assets": [
       "_app/immutable/assets/fira-mono-cyrillic-ext-400-normal.B04YIrm4.woff2",
@@ -151,64 +145,10 @@
       "_ssr.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.8Wu_BF-Y.css"
+      "_app/immutable/assets/_page.CJu5f79S.css"
     ],
     "assets": [
       "_app/immutable/assets/headshot.C4epLeMw.jpg"
-    ]
-  },
-  "src/routes/about/+page.js": {
-    "file": "entries/pages/about/_page.js",
-    "name": "entries/pages/about/_page",
-    "src": "src/routes/about/+page.js",
-    "isEntry": true,
-    "imports": [
-      "_prod-ssr.js"
-    ]
-  },
-  "src/routes/about/+page.svelte": {
-    "file": "entries/pages/about/_page.svelte.js",
-    "name": "entries/pages/about/_page.svelte",
-    "src": "src/routes/about/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js"
-    ]
-  },
-  "src/routes/contact/+page.svelte": {
-    "file": "entries/pages/contact/_page.svelte.js",
-    "name": "entries/pages/contact/_page.svelte",
-    "src": "src/routes/contact/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page.HLe74w_d.css"
-    ]
-  },
-  "src/routes/music/+page.svelte": {
-    "file": "entries/pages/music/_page.svelte.js",
-    "name": "entries/pages/music/_page.svelte",
-    "src": "src/routes/music/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page.wc1tOD2T.css"
-    ]
-  },
-  "src/routes/projects/+page.svelte": {
-    "file": "entries/pages/projects/_page.svelte.js",
-    "name": "entries/pages/projects/_page.svelte",
-    "src": "src/routes/projects/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_ssr.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page.BTL8pIEz.css"
     ]
   }
 }

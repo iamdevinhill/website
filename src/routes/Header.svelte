@@ -81,9 +81,6 @@
 						<a href="/">Home</a>
 					</li>
 					<li>
-						<button on:click={() => scrollToSection('projects')} class="nav-link">Projects</button>
-					</li>
-					<li>
 						<button on:click={() => scrollToSection('contact')} class="nav-link">Contact</button>
 					</li>
 				</ul>
@@ -120,9 +117,6 @@
 				<ul>
 					<li>
 						<a href="/" on:click={toggleMenu}>Home</a>
-					</li>
-					<li>
-						<button on:click={() => scrollToSection('projects')} class="nav-link">Projects</button>
 					</li>
 					<li>
 						<button on:click={() => scrollToSection('contact')} class="nav-link">Contact</button>

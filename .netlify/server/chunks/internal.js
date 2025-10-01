@@ -115,7 +115,7 @@ const options = {
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">\n		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">\n		' + head + '\n	</head>\n	<body data-sveltekit-preload-data="hover">\n		<div style="display: contents">' + body + "</div>\n	</body>\n</html>",
+    app: ({ head, body, assets: assets2, nonce, env }) => '<!doctype html>\r\n<html lang="en">\r\n	<head>\r\n		<meta charset="utf-8" />\r\n		<link rel="icon" href="' + assets2 + '/fav.png" />\r\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\r\n		\r\n		<!-- SEO Title -->\r\n		<title>Devin Hill - Official Website</title>\r\n		\r\n		<!-- Preconnect for Performance -->\r\n		<link rel="preconnect" href="https://fonts.googleapis.com">\r\n		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\r\n\r\n		<!-- Google Fonts -->\r\n		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">\r\n\r\n		<!-- Font Awesome -->\r\n		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">\r\n\r\n		<!-- Open Graph Meta Tags -->\r\n		<meta property="og:type" content="website" />\r\n		<meta property="og:title" content="Devin Hill - Official Website" />\r\n		<meta property="og:description" content="Official website of Devin Hill, featuring projects and more." />\r\n		<meta property="og:image" content="' + assets2 + '/headshot.jpg" />\r\n		<meta property="og:url" content="https://yourwebsite.com" />\r\n\r\n		<!-- Twitter Card Meta Tags -->\r\n		<meta name="twitter:card" content="summary_large_image" />\r\n		<meta name="twitter:title" content="Devin Hill - Official Website" />\r\n		<meta name="twitter:description" content="Official website of Devin Hill, featuring projects and more." />\r\n		<meta name="twitter:image" content="' + assets2 + '/headshot.jpg" />\r\n\r\n		' + head + '\r\n	</head>\r\n	<body data-sveltekit-preload-data="hover">\r\n		<div style="display: contents">' + body + "</div>\r\n	</body>\r\n</html>\r\n",
     error: ({ status, message }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -187,7 +187,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "141rsv2"
+  version_hash: "1cvvsqm"
 };
 async function get_hooks() {
   return {};
