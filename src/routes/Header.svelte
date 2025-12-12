@@ -46,6 +46,9 @@
 		}
 	});
 
+	/**
+	 * @param {string} sectionId
+	 */
 	function scrollToSection(sectionId) {
 		if (browser) {
 			const element = document.getElementById(sectionId);
@@ -150,28 +153,38 @@
 	}
 	
 	header {
-		background-color: var(--color-bg-0);
-		box-shadow: 0 2px 4px rgba(59, 130, 246, 1);
+		background-color: rgba(18, 18, 18, 0.8);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+		box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 		position: sticky;
 		top: 0;
 		z-index: 100;
 		width: 100%;
+		transition: all var(--transition-base);
 	}
 
 	.header-content {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 70px;
+		height: 80px;
 		position: relative;
 		width: 100%;
 	}
 
 	.logo a {
 		font-size: 1.5rem;
-		font-weight: 700;
+		font-weight: 800;
 		color: var(--color-text);
 		text-decoration: none;
+		letter-spacing: -0.02em;
+		transition: color var(--transition-base);
+	}
+	
+	.logo a:hover {
+		color: var(--color-theme-1);
 	}
 
 	nav {
@@ -198,20 +211,37 @@
 		display: flex;
 		height: 100%;
 		align-items: center;
-		padding: 0 0.5rem;
+		padding: 0 1rem;
 		color: var(--color-text);
 		font-weight: 500;
-		font-size: 1.2rem;
+		font-size: 1rem;
 		text-decoration: none;
-		transition: color 0.2s;
+		transition: all var(--transition-base);
 		background: none;
 		border: none;
 		cursor: pointer;
 		font-family: inherit;
+		position: relative;
+	}
+	
+	nav a::after, .nav-link::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0;
+		height: 2px;
+		background: linear-gradient(90deg, var(--color-theme-1), var(--color-theme-2));
+		transition: width var(--transition-base);
 	}
 
 	nav a:hover, .nav-link:hover {
 		color: var(--color-theme-1);
+	}
+	
+	nav a:hover::after, .nav-link:hover::after {
+		width: 80%;
 	}
 
 	.social {
@@ -220,14 +250,24 @@
 	}
 
 	.social a {
-		font-size: 1.3rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		font-size: 1.2rem;
 		color: var(--color-text);
-		margin-left: 1rem;
-		transition: color 0.2s;
+		margin-left: 0.75rem;
+		border-radius: var(--radius-sm);
+		background-color: rgba(255, 255, 255, 0.05);
+		transition: all var(--transition-base);
 	}
 
 	.social a:hover {
-		color: var(--color-theme-1);
+		color: white;
+		background-color: var(--color-theme-1);
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-sm);
 	}
 	
 	/* Hamburger Menu with transition */
@@ -237,15 +277,14 @@
         border: none;
         cursor: pointer;
         padding: 10px;
-        margin-right: 10px;
+        margin-right: 0;
         width: 50px;
         height: 44px;
         position: relative;
         z-index: 1000;
-        transition: transform 0.2s ease; /* Add transition for the entire button */
+        transition: transform var(--transition-fast);
     }
 
-    /* Optional: Add a subtle transform when clicked */
     .hamburger:active {
         transform: scale(0.95);
     }
@@ -256,8 +295,8 @@
         height: 3px;
         background-color: var(--color-text);
         margin: 5px 0;
-        /* Make the span transitions a bit faster and more responsive */
-        transition: transform 0.25s ease, opacity 0.2s ease;
+        border-radius: 2px;
+        transition: transform var(--transition-base), opacity var(--transition-fast);
     }
 
     .hamburger span.open:nth-child(1) {
@@ -279,14 +318,14 @@
         right: 0;
         width: 100%;
         height: 100vh;
-        background-color: var(--color-bg-1);
+        background-color: rgba(18, 18, 18, 0.98);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         z-index: 999;
         opacity: 0;
         visibility: hidden;
-        /* Position menu off-screen to the right by default */
         transform: translateX(100%);
-        /* Faster animation: reduced from 0.4s to 0.25s for transform */
-        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.25s ease;
+        transition: opacity var(--transition-base), visibility var(--transition-base), transform var(--transition-base);
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -331,20 +370,42 @@
 	}
 	
 	.mobile-menu a, .mobile-menu .nav-link {
-		padding: 0.75rem;
+		padding: 1rem;
 		width: 100%;
-		font-size: 2rem;
+		font-size: 1.75rem;
+		font-weight: 600;
 		justify-content: center;
+		transition: all var(--transition-base);
+	}
+	
+	.mobile-menu a:hover, .mobile-menu .nav-link:hover {
+		color: var(--color-theme-1);
+		transform: translateX(8px);
 	}
 	
 	.mobile-social {
 		justify-content: center;
-		margin-top: 3rem;
+		margin-top: var(--spacing-xl);
 	}
 	
 	.mobile-social a {
-		font-size: 2.5rem;
-		margin: 0 1.5rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		font-size: 1.75rem;
+		margin: 0 1rem;
+		border-radius: var(--radius-md);
+		background-color: rgba(255, 255, 255, 0.05);
+		transition: all var(--transition-base);
+	}
+	
+	.mobile-social a:hover {
+		background-color: var(--color-theme-1);
+		color: white;
+		transform: translateY(-4px);
+		box-shadow: var(--shadow-md);
 	}
 
 	.container {

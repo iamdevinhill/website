@@ -25,49 +25,74 @@
 
 <style>
 	footer {
-		background-color: var(--color-bg-0);
-		padding: 2rem 0;
-		margin-top: 1rem;
+		background: linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 100%);
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+		padding: var(--spacing-xl) 0;
+		margin-top: var(--spacing-2xl);
+		position: relative;
+	}
+	
+	footer::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: linear-gradient(90deg, transparent, var(--color-theme-1), transparent);
 	}
 
 	.footer-content {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		gap: var(--spacing-lg);
 	}
 
 	.copyright p {
 		margin: 0;
 		color: var(--color-text-light);
+		font-size: 0.9375rem;
 	}
 
 	.social {
 		display: flex;
+		gap: var(--spacing-sm);
 	}
 
 	.social a {
-		font-size: 1.3rem;
-		color: var(--color-text-light);
-		margin-left: 1rem;
-		transition: color 0.2s;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		font-size: 1.125rem;
+		color: var(--color-text);
+		background-color: rgba(255, 255, 255, 0.05);
+		border-radius: var(--radius-sm);
+		transition: all var(--transition-base);
 	}
 
 	.social a:hover {
-		color: var(--color-theme-1);
+		color: white;
+		background: linear-gradient(135deg, var(--color-theme-1), var(--color-theme-2));
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-sm), var(--shadow-glow);
 	}
 
 	@media (max-width: 768px) {
 		.footer-content {
 			flex-direction: column;
 			text-align: center;
+			gap: var(--spacing-md);
 		}
 
 		.copyright {
-			margin-bottom: 1rem;
+			margin-bottom: 0;
 		}
 
-		.social a {
-			margin: 0 0.5rem;
+		.social {
+			justify-content: center;
 		}
 	}
 </style>
