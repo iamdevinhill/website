@@ -1,20 +1,39 @@
-# create-svelte
+# Devin Hill - Portfolio & Resume Website
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+A modern, responsive portfolio and resume website built with SvelteKit. This website showcases professional experience, technical skills, education, and projects for Devin Hill, a Senior AI/ML Engineer.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- 📱 **Fully Responsive Design** - Optimized for all devices
+- 🎨 **Modern UI/UX** - Clean, professional design with smooth animations
+- 📄 **Comprehensive Resume** - Detailed experience, skills, and education sections
+- 🚀 **Fast Performance** - Built with SvelteKit for optimal loading speeds
+- 🌙 **Dark Theme** - Professional dark color scheme
+- 📱 **Mobile-First** - Touch-optimized navigation and interactions
+- 📊 **Skills Showcase** - Organized technical expertise by category
+- 📅 **Timeline Experience** - Visual representation of career progression
+- 🎯 **Project Portfolio** - Independent projects and achievements
+- 📧 **Contact Section** - Easy ways to get in touch
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Sections
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+1. **Hero** - Introduction with headshot, professional summary, and quick stats
+2. **Skills** - Technical expertise organized by categories (AI/ML, Cloud, Programming, etc.)
+3. **Experience** - Professional timeline with detailed project descriptions
+4. **Projects** - Independent work and personal initiatives
+5. **Education & Certifications** - Academic background and professional credentials
+6. **Contact** - Multiple ways to connect
 
-## Developing
+## Tech Stack
+
+- **Framework**: SvelteKit
+- **Styling**: Custom CSS with CSS Variables
+- **Icons**: Font Awesome
+- **Fonts**: Inter (Google Fonts)
+- **Deployment**: Netlify
+- **Version Control**: Git
+
+## Getting Started
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 

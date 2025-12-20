@@ -15,9 +15,9 @@
 				<a href="https://github.com/iamdevinhill" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
 					<i class="fab fa-github"></i>
 				</a>
-				<!-- <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-					<i class="fab fa-twitter"></i>
-				</a> -->
+				<a href="https://www.youtube.com/@devinhill1211" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+					<i class="fab fa-youtube"></i>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -25,21 +25,10 @@
 
 <style>
 	footer {
-		background: linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 100%);
-		border-top: 1px solid rgba(255, 255, 255, 0.05);
-		padding: var(--spacing-xl) 0;
-		margin-top: var(--spacing-2xl);
-		position: relative;
-	}
-	
-	footer::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		height: 1px;
-		background: linear-gradient(90deg, transparent, var(--color-theme-1), transparent);
+		background: var(--color-bg);
+		border-top: 1px solid var(--color-border);
+		padding: var(--spacing-2xl) 0;
+		margin-top: var(--spacing-3xl);
 	}
 
 	.footer-content {
@@ -51,33 +40,35 @@
 
 	.copyright p {
 		margin: 0;
-		color: var(--color-text-light);
-		font-size: 0.9375rem;
+		color: var(--color-text-tertiary);
+		font-size: 0.875rem;
 	}
 
 	.social {
 		display: flex;
-		gap: var(--spacing-sm);
+		gap: var(--spacing-md);
 	}
 
 	.social a {
-		display: inline-flex;
+		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 40px;
-		height: 40px;
-		font-size: 1.125rem;
-		color: var(--color-text);
-		background-color: rgba(255, 255, 255, 0.05);
-		border-radius: var(--radius-sm);
+		width: 48px;
+		height: 48px;
+		font-size: 1.25rem;
+		color: var(--color-text-secondary);
+		border: 1px solid var(--color-border);
+		border-radius: 50%;
+		background: var(--color-bg);
 		transition: all var(--transition-base);
+		text-decoration: none;
 	}
 
 	.social a:hover {
-		color: white;
-		background: linear-gradient(135deg, var(--color-theme-1), var(--color-theme-2));
-		transform: translateY(-2px);
-		box-shadow: var(--shadow-sm), var(--shadow-glow);
+		color: var(--color-accent);
+		border-color: var(--color-accent);
+		transform: translateY(-4px);
+		box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
 	}
 
 	@media (max-width: 768px) {

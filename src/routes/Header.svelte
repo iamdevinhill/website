@@ -84,6 +84,18 @@
 						<a href="/">Home</a>
 					</li>
 					<li>
+						<button on:click={() => scrollToSection('skills')} class="nav-link">Skills</button>
+					</li>
+					<li>
+						<button on:click={() => scrollToSection('experience')} class="nav-link">Experience</button>
+					</li>
+					<li>
+						<button on:click={() => scrollToSection('projects')} class="nav-link">Projects</button>
+					</li>
+					<li>
+						<button on:click={() => scrollToSection('education')} class="nav-link">Education</button>
+					</li>
+					<li>
 						<button on:click={() => scrollToSection('contact')} class="nav-link">Contact</button>
 					</li>
 				</ul>
@@ -96,6 +108,9 @@
 				</a>
 				<a href="https://github.com/iamdevinhill" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
 					<i class="fab fa-github"></i>
+				</a>
+				<a href="https://www.youtube.com/@devinhill1211" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+					<i class="fab fa-youtube"></i>
 				</a>
 			</div>
 			
@@ -122,6 +137,18 @@
 						<a href="/" on:click={toggleMenu}>Home</a>
 					</li>
 					<li>
+						<button on:click={() => scrollToSection('skills')} class="nav-link">Skills</button>
+					</li>
+					<li>
+						<button on:click={() => scrollToSection('experience')} class="nav-link">Experience</button>
+					</li>
+					<li>
+						<button on:click={() => scrollToSection('projects')} class="nav-link">Projects</button>
+					</li>
+					<li>
+						<button on:click={() => scrollToSection('education')} class="nav-link">Education</button>
+					</li>
+					<li>
 						<button on:click={() => scrollToSection('contact')} class="nav-link">Contact</button>
 					</li>
 				</ul>
@@ -133,6 +160,9 @@
 				</a>
 				<a href="https://github.com/iamdevinhill" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
 					<i class="fab fa-github"></i>
+				</a>
+				<a href="https://www.youtube.com/@devinhill1211" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+					<i class="fab fa-youtube"></i>
 				</a>
 			</div>
 		</div>
@@ -153,16 +183,12 @@
 	}
 	
 	header {
-		background-color: rgba(18, 18, 18, 0.8);
-		backdrop-filter: blur(12px);
-		-webkit-backdrop-filter: blur(12px);
-		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-		box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+		background: var(--color-bg);
+		border-bottom: 1px solid var(--color-border);
 		position: sticky;
 		top: 0;
 		z-index: 100;
 		width: 100%;
-		transition: all var(--transition-base);
 	}
 
 	.header-content {
@@ -175,16 +201,15 @@
 	}
 
 	.logo a {
-		font-size: 1.5rem;
-		font-weight: 800;
+		font-size: 1.125rem;
+		font-weight: 600;
 		color: var(--color-text);
 		text-decoration: none;
-		letter-spacing: -0.02em;
 		transition: color var(--transition-base);
 	}
 	
 	.logo a:hover {
-		color: var(--color-theme-1);
+		color: var(--color-accent);
 	}
 
 	nav {
@@ -213,61 +238,46 @@
 		align-items: center;
 		padding: 0 1rem;
 		color: var(--color-text);
-		font-weight: 500;
-		font-size: 1rem;
+		font-weight: 400;
+		font-size: 0.9375rem;
 		text-decoration: none;
-		transition: all var(--transition-base);
+		transition: color var(--transition-base);
 		background: none;
 		border: none;
 		cursor: pointer;
 		font-family: inherit;
-		position: relative;
 	}
 	
-	nav a::after, .nav-link::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 0;
-		height: 2px;
-		background: linear-gradient(90deg, var(--color-theme-1), var(--color-theme-2));
-		transition: width var(--transition-base);
-	}
-
 	nav a:hover, .nav-link:hover {
-		color: var(--color-theme-1);
-	}
-	
-	nav a:hover::after, .nav-link:hover::after {
-		width: 80%;
+		color: var(--color-accent);
 	}
 
 	.social {
 		display: flex;
 		align-items: center;
+		gap: var(--spacing-md);
 	}
 
 	.social a {
-		display: inline-flex;
+		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 40px;
-		height: 40px;
-		font-size: 1.2rem;
-		color: var(--color-text);
-		margin-left: 0.75rem;
-		border-radius: var(--radius-sm);
-		background-color: rgba(255, 255, 255, 0.05);
+		width: 48px;
+		height: 48px;
+		font-size: 1.25rem;
+		color: var(--color-text-secondary);
+		border-radius: 50%;
+		border: 1px solid var(--color-border);
+		background: var(--color-bg);
 		transition: all var(--transition-base);
+		text-decoration: none;
 	}
 
 	.social a:hover {
-		color: white;
-		background-color: var(--color-theme-1);
-		transform: translateY(-2px);
-		box-shadow: var(--shadow-sm);
+		color: var(--color-accent);
+		border-color: var(--color-accent);
+		transform: translateY(-4px);
+		box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
 	}
 	
 	/* Hamburger Menu with transition */
