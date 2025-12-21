@@ -260,10 +260,10 @@
 						<i class="fas fa-envelope"></i>
 						Get in Touch
 					</a>
-					<button on:click={downloadCV} class="btn btn-secondary">
+					<!-- <button on:click={downloadCV} class="btn btn-secondary">
 						<i class="fas fa-download"></i>
 						Download CV
-					</button>
+					</button> -->
 				</div>
 			</div>
 		</div>
@@ -418,7 +418,7 @@
 					<h3>Let's Work Together</h3>
 					<p>
 						Whether you're looking for a data solution, AI/ML expertise, or just want to connect, 
-						I'm always open to new opportunities and conversations.
+						I'm always open to new opportunities and conversations. Contact me for CV.
 					</p>
 					<p>
 						Feel free to reach out via email. I typically respond within 24-48 hours.
@@ -929,20 +929,18 @@
 	}
 
 	.contact-header .section-title {
-		font-size: 2.5rem;
-		font-weight: 700;
+		font-size: 1.875rem;
+		font-weight: 600;
 		margin-bottom: var(--spacing-md);
-		background: linear-gradient(135deg, var(--color-text) 0%, var(--color-accent) 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		text-align: center;
+		color: var(--color-text);
+		letter-spacing: -0.015em;
+		text-align: left;
 	}
 
 	.contact-header .section-description {
-		font-size: 1.125rem;
+		font-size: 1.0625rem;
 		color: var(--color-text-secondary);
-		text-align: center;
+		text-align: left;
 	}
 
 	.contact-grid {
