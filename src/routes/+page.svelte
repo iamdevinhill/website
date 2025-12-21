@@ -227,7 +227,7 @@
 </script>
 
 <svelte:head>
-	<title>Devin Hill | Senior AI/ML Engineer | Portfolio & Resume</title>
+	<title>Devin Hill | AI/ML Engineer | Portfolio & Resume</title>
 	<meta name="description" content="Senior AI/ML Engineer specializing in LLMs, RAG applications, knowledge graphs, and cloud architecture. Secret clearance. Based in Nashville, TN." />
 </svelte:head>
 
@@ -239,7 +239,7 @@
 			</div>
 			<div class="hero-text">
 				<h1>Devin Hill</h1>
-				<h2>Senior AI/ML Engineer | Technical Lead</h2>
+				<h2>AI/ML Engineer | Technical Lead</h2>
 				<p class="subtitle">{summary}</p>
 				<div class="hero-stats">
 					<div class="stat">
