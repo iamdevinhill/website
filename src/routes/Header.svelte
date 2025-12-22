@@ -90,9 +90,6 @@
 						<button on:click={() => scrollToSection('experience')} class="nav-link">Experience</button>
 					</li>
 					<li>
-						<button on:click={() => scrollToSection('projects')} class="nav-link">Projects</button>
-					</li>
-					<li>
 						<button on:click={() => scrollToSection('education')} class="nav-link">Education</button>
 					</li>
 					<li>
@@ -141,9 +138,6 @@
 					</li>
 					<li>
 						<button on:click={() => scrollToSection('experience')} class="nav-link">Experience</button>
-					</li>
-					<li>
-						<button on:click={() => scrollToSection('projects')} class="nav-link">Projects</button>
 					</li>
 					<li>
 						<button on:click={() => scrollToSection('education')} class="nav-link">Education</button>
