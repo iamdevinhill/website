@@ -111,29 +111,16 @@
 		},
 		{
 			company: "Thompson Caterpillar Machinery",
-			role: "Parts Sales Analyst",
-			period: "7/2020 – 9/2022",
-			location: "Nashville Metro, TN",
+			role: "Sales Analyst",
+			period: "7/2015 – 9/2022",
+			location: "LaVergne, TN",
 			highlights: [
-				"Analyze sales numbers and inventory",
-				"Diagnosing/researching new CAT parts for customers",
-				"Assist customer orders",
-				"Department project for organizing/selling discontinued inventory",
-				"Assist in managing employees/operations while active management was out of office",
-				"After hours on-call duties"
-			]
-		},
-		{
-			company: "Thompson Caterpillar Machinery",
-			role: "Sales Coordinator",
-			period: "4/2015 – 7/2020",
-			location: "Nashville Metro, TN",
-			highlights: [
-				"Manage/forecast new machine/attachment inventory",
-				"Coordinate new sales deals with salesmen/service department",
-				"Arrange shipping between stores/customers",
-				"Logistic arrangements of deals",
-				"Present weekly status of deals to upper management"
+				"Analyzed sales numbers and inventory for monthly quota, trends, and projection with Excel",
+				"Led department project for organizing/selling discontinued inventory",
+				"Managed the inventory forecast new machines and attachments",
+				"Arranged shipping supply chain between stores and customers",
+				"Presented weekly status of deals to upper management",
+				"Coordinated new sales with salesmen and service department"
 			]
 		},
 		{
