@@ -21,7 +21,7 @@
 	];
 
 	// Professional summary
-	const summary = "AI/ML Engineer with demonstrated proficiency in technical development and conveying intricate ideas to non-technical audiences. Emphasis in deploying full stack AI applications with large language models, knowledge graph and relational databases, API middleware, user friendly frontend, and containerization. Motivated to be a lifelong learner who continuously strives to improve and expand my skill set.";
+	const summary = "Senior Engineer with demonstrated proficiency in technical development and conveying intricate ideas to non-technical audiences. Emphasis in deploying full stack AI applications with large language models, knowledge graph and relational databases, API middleware, user friendly frontend, and containerization. Motivated to be a lifelong learner who continuously strives to improve and expand my skill set.";
 
 	// Experience data from CV
 	const experiences = [
@@ -231,7 +231,7 @@
 			</div>
 			<div class="hero-text">
 				<h1>Devin Hill</h1>
-				<h2>AI/ML Engineer | Technical Lead</h2>
+				<h2>Senior AI/ML Engineer</h2>
 				<p class="subtitle">{summary}</p>
 				<div class="hero-stats">
 					<div class="stat">
