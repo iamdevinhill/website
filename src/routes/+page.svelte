@@ -21,7 +21,7 @@
 	];
 
 	// Professional summary
-	const summary = "Senior Engineer with demonstrated proficiency in technical development and conveying intricate ideas to non-technical audiences. Emphasis in deploying full stack AI applications with large language models, knowledge graph and relational databases, API middleware, user friendly frontend, and containerization. Motivated to be a lifelong learner who continuously strives to improve and expand my skill set.";
+	const summary = "Senior engineer with demonstrated proficiency in technical development and conveying intricate ideas to non-technical audiences. Emphasis in deploying full stack AI applications with large language models, knowledge graph and relational databases, API middleware, user friendly frontend, and containerization. Motivated to be a lifelong learner who continuously strives to improve and expand my skill set.";
 
 	// Experience data from CV
 	const experiences = [
@@ -220,7 +220,7 @@
 
 <svelte:head>
 	<title>Devin Hill | AI/ML Engineer | Portfolio & Resume</title>
-	<meta name="description" content="Senior AI/ML Engineer specializing in LLMs, RAG applications, knowledge graphs, and cloud architecture. Secret clearance. Based in Nashville, TN." />
+	<meta name="description" content="Senior AI/ML Engineer specializing in applied AI. Secret clearance. Based in Nashville, TN." />
 </svelte:head>
 
 <section class="hero">
