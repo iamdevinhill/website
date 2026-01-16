@@ -174,7 +174,7 @@
 	// Skills (derived from CV)
 	const skills = {
 		"AI / Machine Learning": ["LLMs", "Retrieval-Augmented Generation (RAG)", "Knowledge Graphs", "Multimodal AI", "Computer Vision", "Edge Deployment"],
-		"Cloud & Infrastructure": ["AWS (S3, Lambda, Bedrock, DynamoDB, EC2)", "Docker", "GPU CUDA"],
+		"Cloud & Infrastructure": ["AWS (S3, Lambda, Bedrock, DynamoDB, EC2, Textract)", "Docker", "GPU CUDA"],
 		"Programming": ["Python", "FastAPI", "JavaScript", "HTML/CSS", "SQL", "ASP.NET"],
 		"Frameworks & Tools": ["Ollama", "Neo4j", "PostgreSQL", "ChromaDB", "Streamlit", "Svelte"],
 		"Data Engineering": ["ETL Pipelines", "Mage", "SQL Server", "Data Visualization"],
