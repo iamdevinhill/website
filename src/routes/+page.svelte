@@ -153,6 +153,11 @@
 	// Education
 	const education = [
 		{
+			degree: "MS Computer Science",
+			institution: "Georgia Institute of Technology",
+			status: "In progress"
+		},
+		{
 			degree: "MS Management",
 			institution: "Middle Tennessee State University"
 		},
@@ -338,7 +343,9 @@
 				{#each education as edu}
 					<div class="education-card">
 						<h3>{edu.degree}</h3>
-						<p class="institution">{edu.institution}</p>
+						<p class="institution">
+							{edu.institution}{#if edu.status}&nbsp;({edu.status}){/if}
+						</p>
 					</div>
 				{/each}
 			</div>
